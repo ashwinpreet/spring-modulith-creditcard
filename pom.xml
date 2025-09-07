@@ -39,6 +39,18 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.springframework.modulith</groupId>
+                <artifactId>spring-modulith-docs-maven-plugin</artifactId>
+                <version>${spring.modulith.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>document</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
