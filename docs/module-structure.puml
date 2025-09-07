@@ -1,0 +1,11 @@
+@startuml
+!theme plain
+package "Credit Card Application" {
+  [ApplicationModule] as Application
+  [DecisionModule] as Decision
+  [NotificationModule] as Notification
+
+  Application --> Decision : depends on
+  Decision --> Notification : depends on
+}
+@enduml

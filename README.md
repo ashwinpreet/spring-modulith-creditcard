@@ -36,4 +36,27 @@ Modules communicate via Spring domain events.
 
 ---
 
+## Module Dependency Verification
+
+Unit tests are provided to verify the dependencies between modules using Spring Modulith's API. To run the tests:
+
+```sh
+mvn test -Dtest=ModuleDependencyTest
+```
+
+This will check that:
+- All expected modules are present
+- Application module depends on Decision
+- Decision module depends on Notification
+- Notification module has no dependencies
+
+## Module Structure UML Diagram
+
+A UML diagram describing the module dependencies is available in [docs/module-structure.puml](docs/module-structure.puml). You can render this PlantUML file using any PlantUML tool or plugin, for example:
+
+- [PlantUML Online Server](https://www.plantuml.com/plantuml/)
+- IntelliJ IDEA PlantUML integration
+
+![Module Structure UML](docs/module-structure.puml)
+
 This project is for demonstration purposes only.
